@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <meta charset="UTF-8">
@@ -12,10 +11,7 @@
 </head>
 <body>
      
-  <!-- <?php include 'header.php'; ?> -->
-
   
-  <!-- <main> -->
     <header>
         <h2>مرحبا بكم في موقعنا 👋</h2>
     </header>
@@ -33,66 +29,62 @@
     
     <section class="form-section">
       <h2>اطلب الخدمة الآن</h2>
-      <form method="post" action="">
+      <form id="orderForm">
         <label>الاسم:</label>
-        <input type="text" name="username"placeholder="ادخل الاسم" required>
+        <input type="text" name="username" id="username" placeholder="ادخل الاسم" required>
 
         <label>رقم الجوال:</label>
-        <input type="text" name="phone" placeholder="ادخل رقم الجوال"required>
+        <input type="text" name="phone" id="phone" placeholder="ادخل رقم الجوال" required>
 
         <label>الخدمة المطلوبة:</label>
-        <select name="service" required>
+        <select name="service" id="service" required>
           <option value="سباكة">سباكة</option>
           <option value="كهرباء">كهرباء</option>
           <option value="ترميم">ترميم</option>
         </select>
-        <label >وصف حالة الطلب حول المراد اصلاحه</label>
-        <textarea name="message" rows="5">
-          </textarea><br>
+        <label>وصف حالة الطلب حول المراد اصلاحه</label>
+        <textarea name="message" id="message" rows="5"></textarea><br>
   
         <label>العنوان:</label>
-        <input type="text" id="address" name="location" placeholder="الرجاء نسخ موقعك الجغرافي ولصقه هنا لكي يتم الوصول اليك"  required>
+        <input type="text" id="address" name="location" placeholder="الرجاء نسخ موقعك الجغرافي ولصقه هنا لكي يتم الوصول اليك" required>
 
-        <a href="https://wa.me/967772765735">
-        <h1 class="whatsapp-title">ارسال الطلب</h1>
-        </a>
-      </div> 
+        <!-- زر الإرسال -->
+        <button type="submit" class="whatsapp-title">ارسال الطلب</button>
       </form>
-
     </section>
    
-    <!-- عرض البيانات بعد الإرسال -->
-    <!-- <?php
-      if { (isset($_POST['send'])) 
-        $name = $_POST['username'];
-        $phone = $_POST['phone'];
-        $service = $_POST['service'];
-        $address = $_POST['address'];
-        $address = $_POST['message'];
-
-        echo "<div class='result'>";
-        echo "<h3>✅ تم استلام طلبك</h3>";
-        echo "<p><b>الاسم:</b> $name</p>";
-        echo "<p><b>رقم الجوال:</b> $phone</p>";
-        echo "<p><b>الخدمة:</b> $service</p>";
-        echo "<p><b>العنوان:</b> $address</p>";
-           echo "<p><b>العنوان:</b> $message</p>";
-        echo "</div>";
-      }
-    ?> -->
-  <!-- </main> -->
-
-  <!-- الفوتر -->
-  <!-- <?php include 'footer.php'; ?> -->
-
 
   <footer>
         <h4>تصميم المهندس : محمد حمود</h4>
         <h5>لتواصل </h5>
-        <p><img src="image/m.ico" alt="email"><a href="mohammadhezam599@gmail.com">mohammedhezam@gmail.com</a></p>
+        <p><img src="image/m.ico" alt="email"><a href="malto:mohammadhezam599@gmail.com">mohammedhezam@gmail.com</a></p>
        <a href="https:/wa.me/967772765735"> <img src="image/w.ico" alt=""> وتساب</a>
        
     </footer>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  let name = document.getElementById("username").value;
+  let phone = document.getElementById("phone").value;
+  let service = document.getElementById("service").value;
+  let message = document.getElementById("message").value;
+  let address = document.getElementById("address").value;
+
+  // رقمك الثابت في واتساب
+  let myNumber = "00966508701910";
+
+  // تكوين الرسالة
+  let text = `مرحباً، اسمي: ${name}%0Aرقمي: ${phone}%0Aالخدمة: ${service}%0Aالوصف: ${message}%0Aالعنوان: ${address}`;
+
+  // رابط رسمي لواتساب (شغال على المتصفح و GitHub Pages)
+  let url = `https://wa.me/${myNumber}?text=${text}`;
+
+  // فتح الواتساب في نافذة جديدة
+  window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
