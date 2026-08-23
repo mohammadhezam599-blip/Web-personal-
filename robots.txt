@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mohammadhezam599-blip.github.io/Web-personal/sitemap.xml
