@@ -1,91 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
     <meta charset="UTF-8">
-<meta name="google-site-verification" content="X9m7dHVfhAZCuWyHGXm7rErIwDOXPQCFI5HQi_sXt-E" />
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>خدمات السباكهة والكهرباء</title>
+      <meta name="google-site-verification" content="..." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خدمات سباكة وكهرباء في الرياض بسرعة وموثوقية. اطلب الخدمة عبر النموذج أو اتصل مباشرة.">
+    <meta name="robots" content="index, follow">
+    <title>سباك وكهربائي في الرياض | اطلب الخدمة الآن</title>
     <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="hesder.html">
-            <link rel="stylesheet" href="footer.html">
+  </head>
 
-
-</head>
-<body>
-     
-  
-    <header>
-        <h2>مرحبا بكم في موقعنا 👋</h2>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <p class="eyebrow">خدمات منزلية موثوقة في الرياض</p>
+        <h1>سباك وكهربائي في الرياض</h1>
+        <p class="header-text">خدمات سباكة وكهرباء سريعة واحترافية للمنازل والمنشآت داخل الرياض.</p>
+        <div class="header-actions" aria-label="خيارات طلب الخدمة">
+          <a class="button button-primary" href="#service-form">اطلب الخدمة الآن</a>
+          <a class="button button-light" href="tel:+966548170276">اتصال مباشر</a>
+        </div>
+      </div>
     </header>
-    
-      <h1>شعارنا نحن الافضل</h1>
-    <section class="intro">
-       
-      <h2>مرحبا بك 👋</h2>
-      <p>
-        نحن نقدم خدمات <b>السباكة</b> و <b>الكهرباء</b> بخبرة عالية
-        وسرعة في الإنجاز. معنا تجد الجودة والراحة في مكان واحد.
-      </p>
-    </section>
 
-    
-    <section class="form-section">
-      <h2>اطلب الخدمة الآن</h2>
-      <form id="orderForm">
-        <label>الاسم:</label>
-        <input type="text" name="username" id="username" placeholder="ادخل الاسم" required>
+    <main class="container">
+      <section class="intro" aria-labelledby="intro-title">
+        <p class="section-label">خدمات الكهرباء والسباكة في الرياض</p>
+        <h2 id="intro-title">نصل إليك داخل الرياض ونساعدك بسرعة</h2>
+        <p>
+          نقدم خدمات السباكة والكهرباء والترميم بجودة عالية واهتمام بالتفاصيل.
+          أرسل بيانات طلبك وسنتواصل معك لتحديد الخدمة والوقت المناسبين.
+        </p>
+        <div class="service-cards" aria-label="الخدمات المتوفرة">
+          <article class="service-card">
+            <h3>خدمات السباكة</h3>
+            <p>إصلاح التسربات، الأعطال، الصنابير، السخانات وتمديدات المياه.</p>
+          </article>
+          <article class="service-card">
+            <h3>خدمات الكهرباء</h3>
+            <p>إصلاح الأعطال، المفاتيح، الإنارة، المقابس والتمديدات الكهربائية.</p>
+          </article>
+          <article class="service-card">
+            <h3>أعمال الترميم</h3>
+            <p>معالجة الأعمال المنزلية المرتبطة بخدمات السباكة والكهرباء.</p>
+          </article>
+        </div>
+      </section>
 
-        <label>رقم الجوال:</label>
-        <input type="text" name="phone" id="phone" placeholder="ادخل رقم الجوال" required>
+      <section class="form-section" aria-labelledby="request-title">
+        <p class="section-label">طلب خدمة</p>
+        <h2 id="request-title">اطلب الخدمة الآن</h2>
+        <p class="form-intro">أدخل بياناتك، وسيتم فتح محادثة واتساب تحتوي على تفاصيل طلبك داخل الرياض.</p>
 
-        <label>الخدمة المطلوبة:</label>
-        <select name="service" id="service" required>
-          <option value="سباكة">سباكة</option>
-          <option value="كهرباء">كهرباء</option>
-          <option value="ترميم">ترميم</option>
-        </select>
-        <label>وصف حالة الطلب حول المراد اصلاحه</label>
-        <textarea name="message" id="message" rows="5"></textarea><br>
-  
-        <label>العنوان:</label>
-        <input type="text" id="address" name="location" placeholder="الرجاء نسخ موقعك الجغرافي ولصقه هنا لكي يتم الوصول اليك" required>
+        <form id="service-form">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="username">الاسم الكامل</label>
+              <input id="username" type="text" name="username" placeholder="أدخل الاسم الكامل" autocomplete="name" required>
+            </div>
 
-        <!-- زر الإرسال -->
-        <button type="submit" class="whatsapp-title">ارسال الطلب</button>
-      </form>
-    </section>
-   
+            <div class="form-field">
+              <label for="phone">رقم الجوال</label>
+              <input id="phone" type="tel" name="phone" placeholder="05xxxxxxxx" autocomplete="tel" inputmode="tel" dir="ltr" required>
+            </div>
 
-  <footer>
-        <h4>تصميم المهندس : محمد حمود</h4>
-        <h5>لتواصل </h5>
-        <p><img src="image/m.ico" alt="email"><a href="mailto:mohammadhezam599@gmail.com">mohammedhezam@gmail.com</a></p>
-       <a href="https:/wa.me/967772765735"> <img src="image/w.ico" alt=""> وتساب</a>
-       
+            <div class="form-field">
+              <label for="service">الخدمة المطلوبة</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>اختر الخدمة</option>
+                <option value="سباكة">سباكة</option>
+                <option value="كهرباء">كهرباء</option>
+                <option value="ترميم">ترميم</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="message">وصف المشكلة</label>
+              <textarea id="message" name="message" rows="5" placeholder="اكتب وصفًا مختصرًا للمشكلة أو العطل"></textarea>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="location">الموقع أو العنوان</label>
+              <input id="location" type="text" name="location" placeholder="اكتب العنوان أو الصق رابط موقعك الجغرافي" autocomplete="street-address" required>
+            </div>
+          </div>
+
+          <button class="button button-submit" type="submit">إرسال الطلب عبر واتساب</button>
+          <p class="privacy-note">لن يتم إرسال الطلب إلا بعد ضغط زر الإرسال.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <h2>خدمات السباكة والكهرباء في الرياض</h2>
+        <p>للاستفسارات وطلبات الخدمة داخل الرياض:</p>
+        <div class="contact-links">
+          <a href="tel:+966548170276">اتصال: 0548170276</a>
+          <a href="https://wa.me/966548170276" target="_blank" rel="noopener noreferrer">واتساب</a>
+          <a href="mailto:mohammedhezam@gmail.com">البريد الإلكتروني</a>
+        </div>
+        <p class="copyright">تصميم المهندس: محمد حمود</p>
+      </div>
     </footer>
 
-<script>
-document.getElementById("orderForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+    <script>
+      const form = document.getElementById('service-form');
+      const whatsappNumber = '966548170276';
 
-  let name = document.getElementById("username").value;
-  let phone = document.getElementById("phone").value;
-  let service = document.getElementById("service").value;
-  let message = document.getElementById("message").value;
-  let address = document.getElementById("address").value;
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-  // رقمك الثابت في واتسا
-  let myNumber = "+966508701910";
+        const formData = new FormData(form);
+        const message = [
+          'طلب خدمة جديد',
+          `الاسم: ${formData.get('username')}`,
+          `رقم الجوال: ${formData.get('phone')}`,
+          `الخدمة: ${formData.get('service')}`,
+          `وصف المشكلة: ${formData.get('message') || 'لم يذكر'}`,
+          `الموقع أو العنوان: ${formData.get('location')}`
+        ].join('\n');
 
-  // تكوين الرسالة
-  let text = `مرحباً، اسمي: ${name}%0Aرقمي: ${phone}%0Aالخدمة: ${service}%0Aالوصف: ${message}%0Aالعنوان: ${address}`;
-
-  // رابط رسمي لواتساب (شغال على المتصفح و GitHub Pages)
-  let url = `https://wa.me/${myNumber}?text=${text}`;
-
-  // فتح الواتساب في نافذة جديدة
-  window.open(url, "_blank");
-});
-</script>
-
-</body>
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      });
+    </script>
+  </body>
 </html>
